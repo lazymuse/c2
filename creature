@@ -1,33 +1,43 @@
 //// CREATURE 
 //richard f
 
+// global 
+float x,y;
 
 void setup(){
   size(500,500);      //screen size//
+x=  width/2;
+y= height/2;
 }
 
 //// NEXT FRAME.
 void draw() {
+  background(255,255,255);
+fill(92,178,23);
+  ellipse(x,y,80,80);// body 1//
+  fill(92,178,23);
+ fill(92,178,23);
+  ellipse(x,y+75,80,80);// body 2//
+  fill(92,178,23);
+  ellipse(x+10,y+130,80,80);// body 3//
+ fill(92,178,23);
+ ellipse(x,y+200,80,80);// body 4//
+  line(x-40,y-10,x-100,y-50); // left arm body 1//
+    line(x-40,y+70,x-100,y+100); //left arm body 2//
+  line(x+40,y-10,x+100,y-50); //right arm body 1//
+  line(x+40,y+70,x+100,y+60); //right arm body 2//
   
-  ellipse(250,250,80,80);// body 1//
-  ellipse(250,325,80,80);// body 2//
-  ellipse(260,380,80,80);// body 3//
-  ellipse(250,450,80,80);// body 4//
-  line(210,240,150,200); // left arm body 1//
-  line(210,320,150,350); //left arm body 2//
-  line(290,240,350,200); //right arm body 1//
-  line(290,320,350,310); //right arm body 2//
-  
-  fill(255,255,255);
-  ellipse(250,200,60,60);// head//
-  
-  ellipse(250,180,80,20);//bottom hat//
-  rect(220,100,60,80); //top hat//
+  fill(33,147,216);
+  ellipse(x,y-50,60,60);// head//
+  fill(39,47,52);
+  ellipse(x,y-70,80,20);//bottom hat//
+  fill(39,47,52);
+  rect(x-30,y-150,60,80); //top hat//
   fill(0);
-  ellipse(230,200,10,10); // left eye//
+  ellipse(x-20,y-50,10,10); // left eye//
   fill(0);
-  ellipse(270,200,10,10);// right eye//
-  fill(204);
-  triangle(250,210,230,210,237,222); //mouth//
-
+  ellipse(x+20,y-50,10,10);// right eye//
+  fill(252,74,128);
+  triangle(x,y-40,x-20,y-40,x-13,y-28); //mouth//
+     x= x+2; y= y+1; ///moving
 }
